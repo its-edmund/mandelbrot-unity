@@ -27,11 +27,14 @@ public class Explorer : MonoBehaviour
             scaleX *= aspect;
         }
 
-        if(Input.GetMouseButton(0)) {
-            mat.SetVector("_Area", new Vector4(pos.x, pos.y, scaleX, scaleY));
-        } else {
-            mat.SetVector("_Area", new Vector4(smoothPos.x, smoothPos.y, scaleX, scaleY));
-        }
+
+        mat.SetVector("_Area", new Vector4(smoothPos.x, smoothPos.y, scaleX, scaleY));
+
+        // if(Input.GetMouseButton(0)) {
+        //     mat.SetVector("_Area", new Vector4(pos.x, pos.y, scaleX, scaleY));
+        // } else {
+        //     mat.SetVector("_Area", new Vector4(smoothPos.x, smoothPos.y, scaleX, scaleY));
+        // }
     }
 
     private void HandleInputs() {
